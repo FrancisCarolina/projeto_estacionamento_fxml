@@ -1,16 +1,14 @@
 package ifpr.pgua.eic.exemplo.models;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Estacionamento {
     private String nome;
     private String telefone;
     private ArrayList<Veiculo> veiculos;
-    
+
     public Estacionamento(String nome, String telefone) {
         this.nome = nome;
         this.telefone = telefone;
@@ -40,6 +38,11 @@ public class Estacionamento {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void setVeiculos(ArrayList<Veiculo> lista) {
+        veiculos.clear();
+        veiculos.addAll(lista);
     }
 
     public ArrayList<Veiculo> listaTodosVeiculos(){
